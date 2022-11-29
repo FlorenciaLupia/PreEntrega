@@ -1,0 +1,10 @@
+
+.item{
+    text-align: center;
+}
+
+#titulo{
+    color: crimson;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    padding: 3%;
+}

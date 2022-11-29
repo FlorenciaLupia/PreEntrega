@@ -1,0 +1,22 @@
+.logo {
+   width: 30%;
+   height: 20%;
+}
+
+
+#carrito {
+    color: coral;
+}
+
+
+#navLink{
+    color: coral;
+    font-family: Verdana, Tahoma, sans-serif; 
+    margin: 5%; 
+    padding-left: 20%;
+}
+
+
+.navbar-toggler{
+    color: brown;
+}
