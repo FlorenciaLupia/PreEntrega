@@ -2,6 +2,7 @@ import { Container, Nav, Navbar } from "react-bootstrap"
 import { FaShoppingCart } from "react-icons/fa";
 import logo from "../../assets/logo_react.png"
 import "./NavBar.css"
+import cartWidget from '../cartWidget/cartWidget'
 
 const NavBar = () => {
   return (
@@ -22,12 +23,11 @@ const NavBar = () => {
 
         <Nav>
           <Nav.Link href="#carrito">
-            <FaShoppingCart id="carrito" /> 1
+          {cartWidget()}
         </Nav.Link>
         </Nav>
         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
 
-        
       </Container>
     </Navbar>
   )
