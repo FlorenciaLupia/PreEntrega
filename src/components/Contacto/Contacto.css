@@ -1,0 +1,18 @@
+
+.tituloCon{
+    color: crimson;
+    font-family: Verdana, Tahoma, sans-serif;
+    text-align: center;
+    margin: 3%;
+}
+
+.parrafoCon{
+    text-align: center;
+    color: orangered;
+}
+
+.parrafoDir{
+    text-align: center;
+    color: coral;
+    font-style: oblique;
+}

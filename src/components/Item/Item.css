@@ -1,0 +1,31 @@
+#tarj{
+    width: 400px;
+    height: 400px;
+}
+
+.card{
+    color: coral;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+}
+
+.botonDetalle{
+    color: coral;
+    background-color: white;
+    border-radius: 5%;
+    border-color: chocolate;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.botonDetalle:hover{
+    color: firebrick;
+}
+
+.cardBody{
+    margin: 3%;
+    text-align: center;
+}
