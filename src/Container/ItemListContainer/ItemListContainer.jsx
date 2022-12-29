@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from '../../components/ItemList/ItemList'
+import Loading from '../../components/Loading/Loading'
 import { pFetch } from "../../Productos/Productos"
 import "./ItemListContainer.css"
 
@@ -24,6 +25,7 @@ const ItemListContainer = ({titulo}) => {
         }
     }, [categoriaId])
    
+
     console.log(categoriaId)
 
     return(
@@ -34,7 +36,7 @@ const ItemListContainer = ({titulo}) => {
        </div>
        <div className="item">
             {loading ? 
-                  <h2 className='tituloCarga'>Cargando Productos!</h2> 
+                  <Loading/>
                   :
                   <ItemList  prod={prod}/>
             }

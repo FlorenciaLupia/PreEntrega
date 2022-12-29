@@ -6,7 +6,7 @@ const Footer = () => {
   return (
         <div className="footer" >
           <p className="tituloFooter">
-             Chicago
+             Chicago Bikinis
           <FiFacebook/>
           <FiInstagram/>
           </p>
