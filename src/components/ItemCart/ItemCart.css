@@ -1,0 +1,33 @@
+
+.divContainer{
+   text-align: center;
+   background-color: beige;
+   border-radius: 15px;
+   border: 60em;
+   margin: 5%;
+   padding-bottom: 3%;
+}
+
+.photoContainer{
+    width: 20%;
+    height: 10%; 
+    padding: 20px;
+    border-radius: 30em;
+ }
+ 
+ .nameCart{
+    color: darkgreen;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+.buttonDelate{
+    background-color: cornsilk;
+    color: crimson;
+    border-color: crimson;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 1em;
+ }
+
+ .buttonDelate:hover{
+    background-color: darkorange;
+ }

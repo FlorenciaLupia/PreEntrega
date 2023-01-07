@@ -5,20 +5,18 @@ const ButtonCart = () => {
   return (
 
     <div className="btnGeneral">
-        <Link to="/carritoo">
+        <Link to="/cart">
            <button
-               className="btnTerminar" 
-               onClick={() => console.log("ir a cart")}
+               className="btnFinish" 
                >
-            Terminar Compra
+               Terminar Compra
            </button>
         </Link>
         <Link to="/">
             <button
-                className="btnTerminar"
-                onClick={() => console.log("ir al home")}
-                >
-                Seguir comprando
+               className="btnFinish"
+               >
+               Seguir comprando
             </button>
         </Link>
     </div>

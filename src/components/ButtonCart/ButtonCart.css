@@ -6,13 +6,13 @@
        
 }
 
-.btnTerminar{
+.btnFinish{
     background-color: cornsilk;
     color: crimson;
     border-color: crimson; 
 }
 
-.btnTerminar:hover{
+.btnFinish:hover{
    background-color: rgb(253, 152, 115);
 }
 

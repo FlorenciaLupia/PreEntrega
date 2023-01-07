@@ -4,6 +4,10 @@ import logo from "../../assets/logo_react.png"
 import CartWidget from '../CartWidget/CartWidget'
 import "./NavBar.css"
 
+const categories = [
+  {id:"12", names:"Bikinis", path:"Bikinis"},
+  {id:"13", names:"Enteriza", path:"Enteriza"}
+]
 
 const NavBar = () => {
   return (
@@ -16,13 +20,21 @@ const NavBar = () => {
         </Link>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            <NavLink to="/categoria/Bikinis" id="navLink">Bikinis</NavLink>
-            <NavLink to="/categoria/Enteriza"  id="navLink">Enteriza</NavLink>
-            <NavLink to="/contacto"  id="navLink">Contacto</NavLink>
+            {categories.map(({id, names, path}) => 
+                                        <NavLink 
+                                              key={id}
+                                              to={`/categoria/${path}`}
+                                              id="navLink">
+
+                                          {`${names}`}
+
+                                         </NavLink>) 
+            }
+            <NavLink to="/contact"  id="navLink">Contacto</NavLink>
           </Nav>
         </Navbar.Collapse>
-        <Nav id="#carrito" >
-          <Link to="/carritoo">
+        <Nav>
+          <Link to="/cart">
           <CartWidget/>
           </Link>
         </Nav>

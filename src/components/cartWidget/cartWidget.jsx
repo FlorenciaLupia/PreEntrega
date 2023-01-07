@@ -1,14 +1,19 @@
 import { FaShoppingCart } from "react-icons/fa";
 import { useCartContext } from "../../Context/CartContext";
+import "./CartWidget.css"
 
 
 const CartWidget = () => {
-  const { cantidadTotal } = useCartContext()
+  const { totalQuantity } = useCartContext()
     return(
-      <>
-        {cantidadTotal() > 0 && cantidadTotal()}
-        <FaShoppingCart id="carrito" /> 
-      </>
+      <div className="containerCar">
+          <div className="car" >
+              <FaShoppingCart /> 
+          </div>
+          <div className="numberC">
+              {totalQuantity () > 0 && totalQuantity()}
+          </div>
+      </div>
     )
 }
 

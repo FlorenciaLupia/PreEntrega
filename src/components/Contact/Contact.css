@@ -1,18 +1,18 @@
 
-.tituloCon{
+.titleConc{
     color: crimson;
     font-family: Verdana, Tahoma, sans-serif;
     text-align: center;
     margin: 3%;
 }
 
-.parrafoCon{
+.paragraphConc{
     text-align: center;
     color: orangered;
     margin: 2em;
 }
 
-.parrafoDir{
+.parDirection{
     text-align: center;
     color: coral;
     font-style: oblique;

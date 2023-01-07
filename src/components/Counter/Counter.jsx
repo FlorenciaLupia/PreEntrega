@@ -1,39 +1,40 @@
 import { useState } from "react"
+import "./Counter.css"
 
-const Carrito = ({ stock= 6, inital=1, onAdd  }) => {
-    const [ contador, setContador ] = useState(inital)
+const Counter = ({ stock= 6, inital=1, onAdd  }) => {
+    const [ count, setCount ] = useState(inital)
     
     const ItemCount1 = () =>{
-      if(contador < stock)
-        setContador(contador + 1)
+      if(count < stock)
+      setCount(count + 1)
     }
 
     const ItemCount2 = () =>{
-      if(contador > inital)
-        setContador(contador - 1)
+      if( count > inital)
+      setCount(count - 1)
     }
 
-    const conutOnAdd = () => onAdd(contador)
+    const conutOnAdd = () => onAdd(count)
     return (
-              <div>
+              <div className="divCount">
                   <button
-                        className="btn btn-outline-secondary"
+                        className="btnMore"
                         onClick={ItemCount1}
               >
                 +
               </button>
 
-                 <label htmlFor="">{contador}</label>
+                 <label htmlFor="">{count}</label>
 
                   <button
-                         className="btn btn-outline-secondary"
+                         className="btnLess"
                          onClick={ItemCount2}
                >
                 -
               </button>
 
                  <button
-                       className="btn btn-outline-secondary"
+                       className="btnClean"
                        onClick={conutOnAdd}
                  >
                       Agregar al carrito
@@ -41,4 +42,4 @@ const Carrito = ({ stock= 6, inital=1, onAdd  }) => {
               </div>
   )}
 
-export default Carrito
+export default Counter

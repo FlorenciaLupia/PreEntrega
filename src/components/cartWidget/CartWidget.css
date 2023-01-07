@@ -1,0 +1,16 @@
+.numberC{
+    color: rgb(238, 35, 35);
+    text-decoration: underline;
+    text-decoration-color: brown;
+}
+
+.car {
+    color: coral; 
+}
+
+.containerCar{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em ;
+
+}

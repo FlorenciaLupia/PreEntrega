@@ -1,36 +1,36 @@
 import { useState} from "react"
 import { useCartContext } from "../../Context/CartContext"
 import ButtonCart from "../ButtonCart/ButtonCart"
-import Carrito from "../Carrito/Carrito"
-import TalleSelector from "../Talle/Talle"
+import WaistSelector from "../Waist/Waist"
+import Counter from "../Counter/Counter"
+
+
 import "./ItemDetail.css"
 
 const ItemDetail = ({prod}) => {
 
   const [inputType, setInputType] = useState("button");
-  const {addToCard, cartList} = useCartContext();
+  const {addToCard} = useCartContext();
 
   const onAdd = (cantidad) => {
-    console.log(cantidad)
     setInputType("input")
     addToCard({ ...prod, cantidad })
   } 
   
-  console.log(cartList)
   return (
     <>
-    <div className="detalle1">
-     <h1 className="tituloDetalle">{prod.title}</h1>
-     <h2 className="subDetalle">Categoria:{prod.categoria}</h2>
-     <img src={prod.foto} alt="foto producto" className="w-50" />
-     <h3 className="precioDetalle">Precio: ${prod.price}</h3>
-     <h4 className="tituloTalle">Elegi tu talle:<TalleSelector/></h4>
+    <div className="detail1">
+     <h1 className="titleDet">{prod.title}</h1>
+     <h2 className="subDetail">Categoria:{prod.categoria}</h2>
+     <img src={prod.foto} alt="photo prod" className="w-50" />
+     <h3 className="priceDetail">Precio: ${prod.price}</h3>
+     <h4 className="tittleTalle">Elegi tu talle:<WaistSelector/></h4>
     </div>
  
-    <div className="contador">
+    <div className="count1">
       {
         inputType === "button" ?
-        <Carrito 
+        <Counter 
         stock={8}
         initial={1}
         onAdd={onAdd}

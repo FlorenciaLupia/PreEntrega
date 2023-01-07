@@ -1,0 +1,39 @@
+
+.btnMore{
+    background-color: cornsilk;
+    color: crimson;
+    border-color: crimson; 
+    border-radius: 3em;
+}
+
+.btnMore:hover{
+    background-color: darkorange;
+ }
+
+ .btnLess{
+    background-color: cornsilk;
+    color: crimson;
+    border-color: crimson; 
+    border-radius: 3em;
+}
+
+.btnLess:hover{
+    background-color: darkorange;
+ }
+
+ .btnClean{
+    background-color: cornsilk;
+    color: crimson;
+    border-color: crimson; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnClean:hover{
+    background-color: darkorange;
+ }
+
+ .divCount{
+    display: flex;
+    justify-content: center;
+    column-gap: 1em;
+ }

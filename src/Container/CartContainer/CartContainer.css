@@ -1,0 +1,42 @@
+
+.titleCart{
+    color: orangered;
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 5%;
+}
+
+.buttonHome{
+   background-color: cornsilk;
+   color: crimson;
+   border-color: crimson; 
+   font-family: Verdana, Tahoma, sans-serif;
+   margin-left: 45%;
+   margin-bottom: 5em;
+
+}
+
+.buttonHome:hover{
+   background-color: rgb(253, 152, 115);
+ }
+
+ .titleTotal{
+    color: coral;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+ }
+
+ .btnC{
+    background-color: cornsilk;
+    color: crimson;
+    border-color: crimson; 
+    font-family: Verdana, Tahoma, sans-serif;
+    margin-left: 5em;
+    margin-bottom: 3em;
+  
+ }
+
+ .btnC:hover{
+    background-color: rgb(253, 152, 115);
+ }

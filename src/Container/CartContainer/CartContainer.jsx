@@ -1,34 +1,42 @@
 import { Link } from "react-router-dom"
 import { useCartContext } from "../../Context/CartContext"
+import ItemCart from "../../components/ItemCart/ItemCart"
+import FormCart from "../../components/FormCart/FormCart"
+import "./CartContainer.css"
+
 
 const CartContainer = () => {
 
-  const { cartList, vaciarCarrito, precioTotal, eliminarProd, cantidadTotal } = useCartContext()
+  const { cleanCart, totalPrice, totalQuantity  } = useCartContext()
 
     return (
       <>
-
-      { cantidadTotal() === 0 &&
-        <><p>No hay nada en el carrito</p><Link to="/">
-            <button>Home</button>
-          </Link></>
+       <ItemCart/>
+       {totalQuantity() === 0 &&
+        <>
+        <h1 className="titleCart">¡No hay productos!</h1>
+        <Link to="/">
+            <button className="buttonHome">Ir al inicio</button>
+        </Link>
+        </>
         }
- 
-       <div>
-       {cartList.map(prod =>
-       <div key={prod.id}>
-         <img src={prod.foto} alt="foto compra"/>
-         <h1>Nombre:{prod.title} </h1>
-         <h2>Cantidad:{prod.cantidad}</h2>
-         <h2>Precio:{prod.price}</h2>
-         <button onClick={()=> eliminarProd(prod.id) }>Eliminar</button>
-       </div> 
-       )}
-       {precioTotal() > 0 && <><h2>Total: {precioTotal()} </h2>
-       <button className="btn btn-outline-danger"
-            onClick={vaciarCarrito}>
+     
+    <div className="containerForm">
+       {totalPrice() > 0 && 
+       <>
+       <h2 className="titleTotal">Total a pagar: ${totalPrice()}</h2>  
+       
+       <FormCart/>
+
+
+       <button className="btnC"
+            onClick={cleanCart}>
+
             Vaciar Carrito
-          </button></>}
+
+       </button>
+         
+      </> }
      </div>
       </>
     )

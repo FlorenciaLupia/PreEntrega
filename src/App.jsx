@@ -4,16 +4,15 @@ import ItemListContainer from './Container/ItemListContainer/ItemListContainer'
 import NavBar from './components/NavBar/NavBar';
 import ItemDetailContainer from "./Container/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
-import Contacto from "./components/Contacto/Contacto";
+import Contact from "./components/Contact/Contact";
 import CartContainer from "./Container/CartContainer/CartContainer";
-
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
   
-  let tituloApp = "Chicago Bikinis"
+  let titleApp = "Chicago Bikinis"
 
   return (
     <CartContextProvider>
@@ -21,11 +20,11 @@ function App() {
     <BrowserRouter> 
       <NavBar/>
     <Routes>
-      <Route path="/" element={<ItemListContainer titulo={tituloApp}/>}/>
-      <Route path="/categoria/:categoriaId" element={<ItemListContainer titulo={tituloApp}/>}/>
-      <Route path="/detalle/:productoId" element={<ItemDetailContainer/>}/>
-      <Route path="/contacto" element={<Contacto/>}/>
-      <Route path="/carritoo" element={<CartContainer/>}/>
+      <Route path="/" element={<ItemListContainer title={titleApp}/>}/>
+      <Route path="/categoria/:categoryId" element={<ItemListContainer titulo={titleApp}/>}/>
+      <Route path="/detalle/:productId" element={<ItemDetailContainer/>}/>
+      <Route path="/contact" element={<Contact/>}/>
+      <Route path="/cart" element={<CartContainer/>}/>
       
     </Routes>  
       

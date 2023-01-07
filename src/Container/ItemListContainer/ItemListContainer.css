@@ -8,14 +8,14 @@
    column-gap: 2em;
 }
 
-#titulo{
+#title1{
     text-align: center;
     color: crimson;
     font-family: Georgia, Times, 'Times New Roman', serif;
     padding: 2%;
 }
 
-.parrafo{
+.paragraph{
     text-align: center;
     color: orangered;
     padding-bottom: 2%;

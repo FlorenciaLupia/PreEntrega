@@ -2,37 +2,32 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from '../../components/ItemList/ItemList'
 import Loading from '../../components/Loading/Loading'
-import { pFetch } from "../../Productos/Productos"
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 import "./ItemListContainer.css"
 
-const ItemListContainer = ({titulo}) => {
+const ItemListContainer = ({title}) => {
     const [prod, setProduct] = useState([])
     const [loading, setLoading] = useState(true)
-    const { categoriaId } = useParams()
-
+    const { categoryId } = useParams()
+    
     useEffect(() => {
-        if (categoriaId){
-            pFetch()
-            .then(respuesta => setProduct(respuesta.filter(prod => prod.categoria === categoriaId)))
-            .catch(err => (console.log(err)))
-            .finally(() => setLoading (false))
+        const db = getFirestore()
+        const queryCollection = collection ( db, "products")
+        const queryFilter = categoryId ? query(queryCollection, 
+         where("categoria","==", categoryId)) : queryCollection
 
-        } else {
-            pFetch()
-            .then(respuesta => setProduct(respuesta))
-            .catch(err => (console.log(err)))
-            .finally(() => setLoading (false))
-        }
-    }, [categoriaId])
-   
+         getDocs(queryFilter)
+        .then(reply => setProduct( reply.docs.map(prod => ({id: prod.id, ...prod.data()}) )))
+        .catch(err => console.log(err))
+        .finally(()=> setLoading(false))
 
-    console.log(categoriaId)
-
+    }, [categoryId])
+ 
     return(
        <>
        <div>
-           <h1 id="titulo">{titulo}</h1>
-           <p className='parrafo'>Tenemos todo lo que buscas para esta temporada 2023! Descuento de hasta el 30% pagando en nuestros locales. </p>
+           <h1 id="title1">{title}</h1>
+           <p className='paragraph'>Tenemos todo lo que buscas para esta temporada 2023! Descuento de hasta el 30% pagando en nuestros locales. </p>
        </div>
        <div className="item">
             {loading ? 
