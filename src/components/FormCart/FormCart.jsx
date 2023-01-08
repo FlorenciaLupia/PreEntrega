@@ -3,7 +3,7 @@ import {addDoc, collection, getFirestore } from "firebase/firestore"
 import { useCartContext } from "../../Context/CartContext"
 import Form from "../Form/Form"
 import Swal from "sweetalert2"
-import "./FormCart.css"
+
 
 const FormCart = () => {
   

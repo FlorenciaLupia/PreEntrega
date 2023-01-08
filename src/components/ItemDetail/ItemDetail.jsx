@@ -3,8 +3,6 @@ import { useCartContext } from "../../Context/CartContext"
 import ButtonCart from "../ButtonCart/ButtonCart"
 import WaistSelector from "../Waist/Waist"
 import Counter from "../Counter/Counter"
-
-
 import "./ItemDetail.css"
 
 const ItemDetail = ({prod}) => {
@@ -12,9 +10,9 @@ const ItemDetail = ({prod}) => {
   const [inputType, setInputType] = useState("button");
   const {addToCard} = useCartContext();
 
-  const onAdd = (cantidad) => {
+  const onAdd = (quantity) => {
     setInputType("input")
-    addToCard({ ...prod, cantidad })
+    addToCard({ ...prod, quantity })
   } 
   
   return (

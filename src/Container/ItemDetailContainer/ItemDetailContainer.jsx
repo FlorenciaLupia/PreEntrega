@@ -4,13 +4,11 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail"
 import Loading from "../../components/Loading/Loading"
 import {doc, getDoc, getFirestore} from "firebase/firestore"
 
-
 const ItemDetailContainer = () => {
       const [prod, setProd] = useState({})
       const [loading, setLoading] = useState(true)
       const {productId} = useParams()
 
-      
       useEffect (() =>{
         const db = getFirestore()
         const queryDoc = doc(db, "products", productId)
@@ -21,7 +19,6 @@ const ItemDetailContainer = () => {
         .finally(()=> setLoading(false))
       }, [])
 
-  
   return (
      <>
        { loading ? <Loading/>

@@ -25,20 +25,15 @@ const CartContainer = () => {
        {totalPrice() > 0 && 
        <>
        <h2 className="titleTotal">Total a pagar: ${totalPrice()}</h2>  
-       
        <FormCart/>
-
-
-       <button className="btnC"
-            onClick={cleanCart}>
+       <button className="btnC" onClick={cleanCart}>
 
             Vaciar Carrito
 
        </button>
-         
       </> }
-     </div>
-      </>
+    </div>
+    </>
     )
   }
   

@@ -7,23 +7,21 @@ const Item = memo (
 
     return (
       <div id="tarj" key={prod.id}>
-      <div className='card'>
-          <div className='cardHeader'>
+       <div className='card'>
+       <div className='cardHeader'>
             {`${prod.title} - $${prod.price}`}
-          </div>
-          <div className='cardBody'>
+       </div>
+       <div className='cardBody'>
             <img src={prod.foto} alt="product photo" className='w-50' />
-          </div>
-          <div>
-
-            <Link to={`/detalle/${prod.id}`}>
+       </div>
+       <div>
+            <Link to={`/detail/${prod.id}`}>
               <button className='botonDetail'>
                 Detalle
               </button>
             </Link>
-
-          </div>
-      </div>
+       </div>
+       </div>
       </div>
     )
   }
